@@ -4,8 +4,8 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
-      - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/coworking-analytics
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 493339161712.dkr.ecr.us-east-1.amazonaws.com
+      - REPOSITORY_URI=493339161712.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics
 
   build:
     commands:
